@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int speed, limit;
+    double x;
+    if(scanf("%d %d", &speed, &limit) != 2)
+    {
+        return 1;
+    }
+    x = (speed - limit) * 100.0 / limit;
+    if (x < 10)
+    {
+     printf("OK\n");
+    }
+    else if (x < 50)
+    {
+    printf("Exceed %.0f%%. Ticket 200\n", x);
+    }
+    else
+    {
+    printf("Exceed %.0f%%. License Revoked\n", x);
+    }
+    return 0;
+}
