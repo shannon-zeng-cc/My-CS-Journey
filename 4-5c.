@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    char name [8];
+    int breath, pulse;
+    if(scanf("%d", &n) != 1)
+    {
+       return 1;
+    }
+     for (i = 0; i < n; i++)
+         {
+         if (scanf("%s %d %d", name, &breath, &pulse) != 3)
+         {
+             return 1;
+         }
+        if (breath <15 || breath > 20 || pulse < 50 || pulse > 70)
+        {
+            printf("%s\n", name);
+        }
+          }
+    return 0;
+}
+            
+        
+        
